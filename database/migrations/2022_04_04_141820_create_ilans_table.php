@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('arac')->nullable();
             $table->string('ürün_cesit')->nullable();
             $table->string('ürün')->nullable();
-            $table->string('ton')->nullable();
+            $table->string('miktar')->nullable();
             $table->string('fiyat')->nullable();
             $table->string('telefon')->nullable();
             $table->text('aciklama')->nullable();
