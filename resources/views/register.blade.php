@@ -81,34 +81,39 @@
                     </div>
                 </div>
                 <div id="formFirma" class="d-none">
-                    <form class="row g-2">
-                        <div class="col-6">
+                    <form method="POST" action="{{route('register')}}"class="row g-2">
+                    @csrf    
+                    <div class="col-6">
                             <label for="inputFirmaAdi" class="form-label">Firma Adi</label>
-                            <input type="text" class="form-control" id="inputFirmaAdi" required>
+                            <input type="text" class="form-control" id="inputFirmaAdi" name="name" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputFirmaAdi" class="form-label">Rol</label>
+                            <input type="text" class="form-control" id="inputFirmaRole" name="role" required>
                         </div>
                         <div class="col-6">
                             <label for="inputFirmaNick" class="form-label">Kullanıcı Adı</label>
-                            <input type="text" class="form-control" id="inputFirmaNick" required>
+                            <input type="text" class="form-control" id="inputFirmaNick" name="username" required>
                         </div>
                         <div class="col-12">
                             <label for="inputFirmaEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputFirmaEmail" required>
+                            <input type="email" class="form-control" id="inputFirmaEmail" name="email" required>
                         </div>
                         <div class="col-6">
                             <label for="inputFirmaSifre" class="form-label">Şifre</label>
-                            <input type="password" class="form-control" id="inputFirmaSifre" required>
+                            <input type="password" class="form-control" id="inputFirmaSifre" name="password"required>
                         </div>
                         <div class="col-6">
                             <label for="inputFirmaSifreTekrar" class="form-label">Şifre Tekrar</label>
-                            <input type="password" class="form-control" id="inputFirmaSifreTekrar" required>
+                            <input type="password" class="form-control" id="inputFirmaSifreTekrar" name="password_check" required>
                         </div>
                         <div class="col-12">
                             <label for="inputFirmaTel" class="form-label">Telefon Numarası</label>
-                            <input id="inputFirmaTel" type="text" class="form-control">
+                            <input id="inputFirmaTel" type="text" class="form-control" name="phone">
                         </div>
                         <div class="col-12">
                             <label for="inputFirmaVergiNo" class="form-label">Vergi Numarası</label>
-                            <input id="inputFirmaVergiNo" type="text" class="form-control">
+                            <input id="inputFirmaVergiNo" type="text" class="form-control" name="vergi_no">
                         </div>
                         <div class="col-4">
                             <label for="inputFirmaIl" class="form-label">İl</label>
@@ -165,30 +170,35 @@
                     </form>
                 </div>
                 <div id="formBireysel" class="d-none">
-                    <form class="row g-2">
-                        <div class="col-6">
+                    <form method="POST" action="{{route('register')}}" class="row g-2">
+                    @csrf    
+                    <div class="col-6">
                             <label for="inputBireyAd" class="form-label">Ad</label>
-                            <input type="text" class="form-control" id="inputBireyAd" required>
+                            <input type="text" class="form-control" id="inputBireyAd" name="name" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputBireyAd" class="form-label">Rol</label>
+                            <input type="text" class="form-control" id="inputBireyRole" name="role" required>
                         </div>
                         <div class="col-6">
                             <label for="inputBireyNick" class="form-label">Kullanıcı Adı</label>
-                            <input type="text" class="form-control" id="inputBireyNick" required>
+                            <input type="text" class="form-control" id="inputBireyNick" name="username" required>
                         </div>
                         <div class="col-12">
                             <label for="inputBireyEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputBireyEmail" required>
+                            <input type="email" class="form-control" id="inputBireyEmail" name="email" required>
                         </div>
                         <div class="col-6">
                             <label for="inputBireySifre" class="form-label">Şifre</label>
-                            <input type="password" class="form-control" id="inputBireySifre" required>
+                            <input type="password" class="form-control" id="inputBireySifre" name="password" required>
                         </div>
                         <div class="col-6">
                             <label for="inputBireySifreTekrar" class="form-label">Şifre Tekrar</label>
-                            <input type="password" class="form-control" id="inputBireySifreTekrar" required>
+                            <input type="password" class="form-control" id="inputBireySifreTekrar" name="password_confirmation" required>
                         </div>
                         <div class="col-12">
                             <label for="inputBireyTel" class="form-label">Telefon Numarası</label>
-                            <input id="inputBireyTel" type="text" class="form-control">
+                            <input id="inputBireyTel" type="text" class="form-control" name="phone">
                         </div>
                         <div class="col-4">
                             <label for="inputFirmaIl" class="form-label">İl</label>
