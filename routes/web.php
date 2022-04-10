@@ -31,3 +31,10 @@ Route::get('/register', function () {
 Route::get('/companies', function () {
     return view('companies');
 });
+Auth::routes();
+
+Route::get('/home', function(){
+    return redirect('');
+})->name('home');
+
+Route::resource('ilan',App\Http\Controllers\IlanController::class);
