@@ -40,7 +40,6 @@ class IlanController extends Controller
 
         $data = [
             'ilan_türü' => 'nakliye',
-            'user_id' => 1,
             'ilan_basligi' => 'test ilani',
             'nereden' => 'ankara',
             'nereye' => 'istanbul',

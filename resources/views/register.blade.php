@@ -46,16 +46,16 @@
                             </form>
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Ana Sayfa</a>
+                                    <a class="nav-link active" aria-current="page" href="/"><i class="bi bi-house"></i> Ana Sayfa</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="bi bi-person-fill"></i> Giriş Yap</a>
+                                    <a class="nav-link" href="/login"><i class="bi bi-person-fill"></i> Giriş Yap</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="bi bi-person-heart"></i> Kayıt Ol</a>
+                                    <a class="nav-link" href="/register"><i class="bi bi-person-heart"></i> Kayıt Ol</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="bi bi-file-earmark-plus"></i> İlan Ver</a>
+                                    <a class="nav-link" href="/register"><i class="bi bi-file-earmark-plus"></i> İlan Ver</a>
                                 </li>
                             </ul>
                         </div>

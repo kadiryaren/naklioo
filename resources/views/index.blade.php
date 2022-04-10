@@ -32,6 +32,7 @@
                 <img src="https://via.placeholder.com/2048x256" class="img-fluid">
             </div>
             <!--Navbar-->
+            
             <div class="col-12 p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
                     <div class="container-fluid">
