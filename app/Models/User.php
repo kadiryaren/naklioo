@@ -44,6 +44,6 @@ class User extends Authenticatable
     ];
 
     public function ilan(){
-        return $this->hasMany(Ilan::Class);
+        return $this->hasMany(ilan::Class);
     }
 }
