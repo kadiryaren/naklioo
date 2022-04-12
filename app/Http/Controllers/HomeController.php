@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ilan;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $trans = ilan::where('ilan_türü','nakliye')->get();
+        $load = ilan::where('ilan_türü','yük')->get();
+        return view('home.index',compact('trans','load'));
     }
 }

@@ -43,7 +43,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function ilan(){
-        return $this->hasMany(ilan::Class);
+    public function nakliye(){
+        return $this->hasMany(ilan::Class)->where('ilan_türü','nakliye');
+    }
+    public function yük(){
+        return $this->hasMany(ilan::Class)->where('ilan_türü','yük');
     }
 }

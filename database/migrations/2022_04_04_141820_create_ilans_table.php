@@ -16,11 +16,15 @@ return new class extends Migration
         Schema::create('ilans', function (Blueprint $table) {
             $table->id();
             $table->string('ilan_türü');
-            $table->integer('user_id')->nullable();
+            $table->integer('user_id');
             $table->string('ilan_basligi')->nullable();
             $table->string('nereden')->nullable();
             $table->string('nereye')->nullable();
+
             $table->string('arac')->nullable();
+            $table->string('arac_cesit')->nullable();
+            $table->string('kasa')->nullable();
+            
             $table->string('ürün_cesit')->nullable();
             $table->string('ürün')->nullable();
             $table->string('miktar')->nullable();
