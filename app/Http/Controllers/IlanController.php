@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 use App\Models\ilan;
+
 
 class IlanController extends Controller
 {
@@ -21,36 +23,52 @@ class IlanController extends Controller
 
    
     public function create()
-    {
-        return view('ilan.create');
+    {   
+        $user = Auth::user();
+        return view('ilan.create',compact('user'));
     }
 
     
     public function store(Request $request)
     {   
 
-       
-        //get the data from the frontend,validate and then use it
+        foreach($request->image as $image){
+            $image->isValid();
+        }
+        
         $data = $request->validate([
             'ilan_türü' => ['required', 'string', 'max:255'], 
             'ilan_basligi' => ['required', 'string', 'max:255'],
             'nereden' => ['required', 'string', 'max:255'],
             'nereye' => ['required', 'string', 'max:255'],
+            
+            'iller' => ['string', 'max:255'],//nakliye
+            'ekyük' => ['string', 'max:255'],//nakliye
             'arac' => ['string', 'max:255'],
+            'kasa' => ['string', 'max:255'],
+            
             'ürün_cesit' => ['string', 'max:255'],
             'ürün' => ['string', 'max:255'],
+            
             'miktar' => ['string', 'max:255'],
+            'kapak' => ['string', 'max:255'],
             'fiyat' =>  ['string', 'max:255'],
+            
             'telefon' => ['string', 'max:255'],
             'aciklama' => ['string', 'max:255'],
             'tarih' =>  ''
         ]);
 
-        
         $user = Auth::user();
 
         $advert = $user->ilan()->create($data);
-
+        
+        foreach($request->image as $image){
+            $imagePath = $advert->photos()->create([
+                'fotograf' => $image->store('photos','public')
+            ]);    
+        }
+        
         return redirect()->route('ilan.show',$advert->id);
         
     }

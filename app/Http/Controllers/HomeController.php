@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $trans = ilan::where('ilan_türü','nakliye')->get();
-        $load = ilan::where('ilan_türü','yük')->get();
+        $trans = ilan::where('ilan_türü','firma')->get();
+        $load = ilan::where('ilan_türü','bireysel')->get();
         return view('home.index',compact('trans','load'));
     }
 }

@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>{{$advert->ilan_basligi}}</h1>
+    @foreach($advert->photos as $photo)
+        <img src="{{asset('storage/'.$photo->fotograf)}}" alt="" style="height: 250px;">
+    @endforeach
 </body>
 </html>
