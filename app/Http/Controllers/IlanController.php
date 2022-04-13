@@ -76,8 +76,8 @@ class IlanController extends Controller
    
     public function show($id)
     {
-        $advert = ilan::find($id);
-        return view('ilan.show',compact('advert'));
+        $ilan = ilan::find($id);
+        return view('ilan.show',compact('ilan'));
     }
 
     

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations
      *
      * @return void
      */
@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('nereden')->nullable();
             $table->string('nereye')->nullable();
 
-            $table->string('iller')->nullable();//nakliye
-            $table->string('ekyük')->nullable();//nakliye
+            $table->string('iller')->nullable();
+            $table->string('ekyük')->nullable();
             $table->string('arac')->nullable();
             $table->string('kasa')->nullable();
             
