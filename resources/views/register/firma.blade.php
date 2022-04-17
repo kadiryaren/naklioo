@@ -8,7 +8,7 @@
             </div>
             <div class="col-6">
                 <label for="inputFirmaNick" class="form-label">Kullanıcı Adı</label>
-                <input type="text" class="form-control" id="inputFirmaNick" required>
+                <input type="text" class="form-control" id="inputFirmaNick" name="username"required>
             </div>
             <div class="col-12">
                 <label for="inputFirmaEmail" class="form-label">Email</label>
@@ -24,33 +24,33 @@
             </div>
             <div class="col-12">
                 <label for="inputFirmaTel" class="form-label">Telefon Numarası</label>
-                <input id="inputFirmaTel" type="text" class="form-control">
+                <input id="inputFirmaTel" type="text" class="form-control" name="phone">
             </div>
             <div class="col-12">
                 <label for="inputFirmaVergiNo" class="form-label">Vergi Numarası</label>
-                <input id="inputFirmaVergiNo" type="text" class="form-control">
+                <input id="inputFirmaVergiNo" type="text" class="form-control" name="vergi_no">
             </div>
             <div class="col-4">
                 <label for="inputFirmaIl" class="form-label">İl</label>
-                <select class="form-control" id="inputFirmaIl" required>
+                <select class="form-control" id="inputFirmaIl" name="il"required>
                     <option>Denizli</option>
                 </select>
             </div>
             <div class="col-4">
                 <label for="inputFirmaIlce" class="form-label">İlçe</label>
-                <select class="form-control" id="inputFirmaIlce" required>
+                <select class="form-control" id="inputFirmaIlce" name="ilce"required>
                     <option>Pamukkale</option>
                 </select>
             </div>
             <div class="col-4">
                 <label for="inpuFirmatMahalle" class="form-label">Mahalle</label>
-                <select class="form-control" id="inpuFirmatMahalle" required>
+                <select class="form-control" id="inpuFirmatMahalle" name="mahalle"required>
                     <option>Kınıklı</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputFirmaAdres" class="form-label">Adres</label>
-                <input type="text" class="form-control" id="inputFirmaAdres" required>
+                <input type="text" class="form-control" id="inputFirmaAdres" name="adres" required>
             </div>
             <div class="col-12">
                 <label for="inputFirmaSehirler" class="form-label">Hizmet Verilen Şehirler</label>
@@ -78,7 +78,7 @@
                     okudum onaylıyorum.</label>
                 <input type="checkbox" class="form-check-input" id="inputSozlesme" required>
                 <!--Hizmet Verilen Şehirler Listesi-->
-                <input id="inputHvsList" type="text" hidden>
+                <input id="inputHvsList" type="text" hidden name="iller">
             </div>
             <div class="col-12">
                 <div class="d-grid g-2">

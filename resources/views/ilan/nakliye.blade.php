@@ -55,19 +55,19 @@
         </div>
         <div class="col-12">
             <label for="inputNakTarih" class="form-label" name="tarih">Yola Çıkma Tarih Saat</label>
-            <input type="date" class="form-control" id="inputNakTarih">
+            <input type="datetime-local" class="form-control" id="inputNakTarih" name="tarih" >
         </div>
         <div class="col-4">
             <label for="inputNakKapak" class="form-label">Kaç Kapak Boş</label>
-            <input type="number" class="form-control" id="inputNakKapak">
+            <input type="number" class="form-control" id="inputNakKapak" name="kapak">
         </div>
         <div class="col-4">
             <label for="inputNakTon" class="form-label">Alabileceğiniz Yük(Ton)</label>
-            <input type="number" class="form-control" id="inputYukTon">
+            <input type="number" class="form-control" id="inputYukTon" name="miktar">
         </div>
         <div class="col-4">
             <label for="inputNakFiyat" class="form-label">Fiyat</label>
-            <input type="number" class="form-control" id="inputNakFiyat">
+            <input type="number" class="form-control" id="inputNakFiyat" name="fiyat">
         </div>
         <div class="col-12">
             <label for="inputNakYukCesit" class="form-label">Alabileceğiniz Yük Çeşidi</label>
@@ -94,7 +94,7 @@
         </div>
         <div class="col-12">
             <label for="inputNakFoto" class="form-label">Fotoğraflar</label>
-            <input class="form-control" type="file" id="inputNakFoto" multiple>
+            <input class="form-control" type="file" id="inputNakFoto" name="image[]" multiple>
         </div>
         <div class="col-12">
             <label for="inputNakAciklama" class="form-label">Ek Açıklama</label>

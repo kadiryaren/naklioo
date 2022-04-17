@@ -23,7 +23,6 @@
         <a href="javascript:history.back()" class="btn btn-secondary"><i class="bi bi-caret-left-fill"></i> Geri</a>
     </div>
     </div>
-    
 <script>
         const inputTur = document.getElementById('inputTur')
         const formFirma = document.getElementById('formFirma')
@@ -37,5 +36,23 @@
 
             
         })
+        const inputHvs = document.getElementsByClassName("hvs")
+        const inputHvsList = document.getElementById("inputHvsList")
+
+        for (let i = 0; i < inputHvs.length; i++) {
+            inputHvs[i].addEventListener("change", function() {
+                if (inputHvs[i].checked) {
+                    if (inputHvsList.value == "") {
+                        inputHvsList.value += inputHvs[i].value
+                    } else {
+                        inputHvsList.value += ", " + inputHvs[i].value
+                    }
+                } else {
+                    inputHvsList.value = inputHvsList.value.replaceAll(", " + inputHvs[i].value, "")
+                    inputHvsList.value = inputHvsList.value.replaceAll(inputHvs[i].value + ", ", "")
+                    inputHvsList.value = inputHvsList.value.replaceAll(inputHvs[i].value, "")
+                }
+            })
+        }
     </script>
 @endsection

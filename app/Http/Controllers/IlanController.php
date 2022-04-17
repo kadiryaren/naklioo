@@ -31,9 +31,12 @@ class IlanController extends Controller
     
     public function store(Request $request)
     {   
-
-        foreach($request->image as $image){
-            $image->isValid();
+        //dd($request);
+        //dd($request->image->count());
+        if(count($request->image) > 0){
+            foreach($request->image as $image){
+                $image->isValid();
+            }
         }
         
         $data = $request->validate([
@@ -63,23 +66,23 @@ class IlanController extends Controller
 
         $advert = $user->ilan()->create($data);
         
-        foreach($request->image as $image){
-            $imagePath = $advert->photos()->create([
-                'fotograf' => $image->store('photos','public')
-            ]);    
+        if(count($request->image) > 0){
+            foreach($request->image as $image){
+                $imagePath = $advert->photos()->create([
+                    'fotograf' => $image->store('photos','public')
+                ]);    
+            }
         }
         
         return redirect()->route('ilan.show',$advert->id);
         
     }
 
-   
     public function show($id)
     {
         $ilan = ilan::find($id);
         return view('ilan.show',compact('ilan'));
     }
-
     
     public function edit($id)
     {   
@@ -87,7 +90,6 @@ class IlanController extends Controller
         return view('ilan.edit',compact('advert'));
     }
 
-    
     public function update(Request $request, $id)
     {   
         
@@ -130,7 +132,6 @@ class IlanController extends Controller
         return view('profile');
     }
 
-    
     public function destroy($id)
     {
         ilan::find($id)->delete();

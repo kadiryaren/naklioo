@@ -8,11 +8,11 @@
             </div>
             <div class="col-6">
                 <label for="inputBireySoyad" class="form-label">Soyad</label>
-                <input type="text" class="form-control" id="inputBireySoyad" required>
+                <input type="text" class="form-control" id="inputBireySoyad" name="lastName" required>
             </div>
             <div class="col-12">
                 <label for="inputBireyNick" class="form-label">Kullanıcı Adı</label>
-                <input type="text" class="form-control" id="inputBireyNick" required>
+                <input type="text" class="form-control" id="inputBireyNick" name="username" required>
             </div>
             <div class="col-12">
                 <label for="inputBireyEmail" class="form-label">Email</label>
@@ -28,29 +28,29 @@
             </div>
             <div class="col-12">
                 <label for="inputBireyTel" class="form-label">Telefon Numarası</label>
-                <input id="inputBireyTel" type="text" class="form-control">
+                <input id="inputBireyTel" type="text" class="form-control" name="phone">
             </div>
             <div class="col-4">
                 <label for="inputFirmaIl" class="form-label">İl</label>
-                <select class="form-control" id="inputBireyIl" required>
+                <select class="form-control" id="inputBireyIl" name="il"required>
                     <option>Denizli</option>
                 </select>
             </div>
             <div class="col-4">
                 <label for="inputBireyIlce" class="form-label">İlçe</label>
-                <select class="form-control" id="inputBireyIlce" required>
+                <select class="form-control" id="inputBireyIlce" name="ilce" required>
                     <option>Pamukkale</option>
                 </select>
             </div>
             <div class="col-4">
                 <label for="inpuBireyMahalle" class="form-label">Mahalle</label>
-                <select class="form-control" id="inpuBireyMahalle" required>
+                <select class="form-control" id="inpuBireyMahalle" name="mahalle" required>
                     <option>Kınıklı</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputBireyAdres" class="form-label">Adres</label>
-                <input type="text" class="form-control" id="inputBireyAdres" required>
+                <input type="text" class="form-control" id="inputBireyAdres" name="adres"required>
             </div>
             <div class="col-12">
                 <label class="form-check-label" for="inputBireySozlesme"><span><a

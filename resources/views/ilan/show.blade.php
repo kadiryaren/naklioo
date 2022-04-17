@@ -23,8 +23,8 @@
                 <div class="carousel-inner">
                     @foreach($ilan->photos as $photo)
                     <div class="carousel-item active">
-                        <a data-fslightbox="gallery" href="./assets/img/p1.jpg">
-                            <img src="{{asset('/storage'.$photo->fotograf)}}" class="d-block w-100">
+                        <a data-fslightbox="gallery" href="{{url('/storage/'.$photo->fotograf)}}">
+                            <img src="{{url('/storage/'.$photo->fotograf)}}" class="d-block w-100">
                         </a>
                     </div>
                     @endforeach
@@ -93,7 +93,7 @@
                 <div class="fs-5"><i class="bi bi-chat-left"></i> Ek Açıklama</div>
                 <hr>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quaerat deserunt natus numquam dolorem debitis cum, odit, iusto, nesciunt provident beatae officia corrupti quasi sit!
+                    {{$ilan->aciklama}}
                 </div>
             </div>
         </div>

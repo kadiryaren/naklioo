@@ -8,73 +8,76 @@
     </div>
     <!--Desktop Filter Section-->
     <div class="col-lg-2 bg-secondary text-light d-none d-lg-block">
-        <form class="row g-2 my-2">
+        <form method="POST" action="{{route('home.filter')}}"class="row g-2 my-2">
+            @csrf
             <div class="col-12">
                 <h2>Filtre</h2>
             </div>
             <div class="col-12">
-                <label for="inputKelime" class="form-label">Kelime</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="col-12">
                 <label for="inputUrunCesidi" class="form-label">Ürün Çeşidi</label>
-                <select class="form-control" id="inputUrunCesidi">
+                <select class="form-control" name="cesit">
+                    <option value=""></option>
                     <option>Deneme</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputNereden" class="form-label">Nereden</label>
-                <select class="form-control" id="inputNereden">
+                <select class="form-control" name="nereden">
+                    <option>Denizli</option>
                     <option>Deneme</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputNereye" class="form-label">Nereye</label>
-                <select class="form-control" id="inputNereye">
+                <select class="form-control" name="nereye">
+                    <option>Pamukkale</option>
                     <option>Deneme</option>
+
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputUlke" class="form-label">Ülke</label>
-                <select class="form-control" id="inputUlke">
+                <select class="form-control" name="ulke">
+                    <option value=""></option>
                     <option>Deneme</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputKapak" class="form-label">Kaç Kapak</label>
-                <input type="number" class="form-control" id="inputKapak">
+                <input type="number" class="form-control" name="kapak">
             </div>
             <div class="col-12">
                 <label for="inputTarih" class="form-label">Yola Çıkış Tarihi</label>
-                <input type="date" class="form-control" id="inputTarih">
+                <input type="date" class="form-control" name="tarih">
             </div>
             <div class="col-12">
                 <label for="inputSaat" class="form-label">Saat</label>
-                <input type="time" class="form-control" id="inputSaat">
+                <input type="time" class="form-control" name="saat">
             </div>
             <div class="col-12">
                 <label for="inputTon" class="form-label">Ağırlık (Ton)</label>
-                <input type="number" class="form-control" id="inputTon">
+                <input type="number" class="form-control" name="ton">
             </div>
             <div class="col-12">
                 <label for="inputUst" class="form-label">Kasa Tipi</label>
-                <select class="form-control" id="inputUst">
-                    <option value="acik">Açik</option>
+                <select class="form-control" name="kasa">
+                    <option value="Açık">Açık</option>
                     <option value="kapali">Kapalı</option>
                 </select>
             </div>
             <div class="col-12">
                 <label for="inputCesit" class="form-label">Araç Çeşidi</label>
-                <select class="form-control" id="inputCesit">
-                    <option value="acik">Asansörlü</option>
-                    <option value="kapali">Şoklu</option>
-                    <option value="kapali">Tır</option>
-                    <option value="kapali">Kamyon</option>
+                <select class="form-control" name="arac">
+                        <option value="Farketmez">Farketmez</option>
+                        <option value="asansörlü">Asansörlü</option>
+                        <option value="şoklu">Şoklu</option>
+                        <option value="tır">Tır</option>
+                        <option value="kamyon">Kamyon</option>
                 </select>
             </div>
             <div class="col-12">
                 <div class="g-2 d-grid">
-                    <input class="btn btn-light" type="submit" value="Filtrele">
+                    <input id="filter" class="btn btn-light" type="submit" value="Filtrele">
                 </div>
             </div>
         </form>
@@ -143,17 +146,18 @@
                 <div class="col-12">
                     <label for="inputCesit" class="form-label">Araç Çeşidi</label>
                     <select class="form-control" id="inputCesit">
-                        <option value="acik">Asansörlü</option>
-                        <option value="kapali">Şoklu</option>
-                        <option value="kapali">Tır</option>
-                        <option value="kapali">Kamyon</option>
+                        <option value="asansörlü">Asansörlü</option>
+                        <option value="şoklu">Şoklu</option>
+                        <option value="tır">Tır</option>
+                        <option value="kamyon">Kamyon</option>
                     </select>
                 </div>
                 <div class="col-12">
                     <div class="g-2 d-grid">
-                        <input class="btn btn-dark" type="submit" value="Filtrele">
+                        <input  class="btn btn-dark" type="submit" value="Filtrele">
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    

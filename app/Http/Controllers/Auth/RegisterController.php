@@ -11,42 +11,16 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
+    
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
     protected function validator(array $data)
     {   
         return Validator::make($data, [
@@ -54,22 +28,37 @@ class RegisterController extends Controller
             'role' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'lastName' => ['string', 'max:255'],
+            'username' => ['string', 'max:255'],
+            'vergi_no' => ['string', 'max:255'],
+            'fiyat' => ['string', 'max:255'],
+            'phone' => ['string', 'max:255'],
+            'adres' => ['string', 'max:255'],
+            'mahalle' => ['string', 'max:255'],
+            'ilce' => ['string', 'max:255'],
+            'il' => ['string', 'max:255'],
+            'iller' => ['string', 'max:255'],
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
     protected function create(array $data)
-    {
+    {   
+        
         return User::create([
-            'name' => $data['name'],
             'role' => $data['role'],
+            'name' => $data['name'],
+            'lastName' => $data['lastName'] ?? "",
+            'username' => $data['username'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
+            'vergi_no' => $data['vergi_no'] ?? "",
+            'phone' => $data['phone'],
+            'il' => $data['il'],
+            'ilce' => $data['ilce'],
+            'mahalle' => $data['mahalle'],
+            'adres' => $data['adres'] ?? "",
+            'iller' => $data['iller'] ?? "",
         ]);
     }
 }

@@ -5,7 +5,12 @@
         <div class="col-12">
             <label for="inputYukUrunCesidi" class="form-label">Ürün Çeşidi</label>
             <select class="form-control" id="inputYukUrunCesidi" name="ürün_cesit"required>
-                <option>Test</option>
+                <option>Tarım</option>
+                <option>Fabrika</option>
+                <option>Hayvan</option>
+                <option>Sıvı</option>
+                <option>Sıvı</option>
+                <option>Sıvı</option>
             </select>
         </div>
         <div class="col-12">
@@ -59,7 +64,7 @@
         </div>
         <div class="col-12">
             <label for="inputYukTarih" class="form-label">Yükün Gideceği Tarih Saat</label>
-            <input type="date" class="form-control" id="inputTarih" name="tarih">
+            <input type="datetime-local" class="form-control" id="inputTarih" name="tarih">
         </div>
         <div class="col-12">
             <label for="inputYukTelefon" class="form-label">Telefon</label>

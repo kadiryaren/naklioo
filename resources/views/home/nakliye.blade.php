@@ -1,8 +1,15 @@
 @foreach($trans as $ilan)
+    <a href="{{route('ilan.show',$ilan->id)}}" style="text-decoration:none;color:black;">
     <div class="bg-light mt-2 border" data-aos="flip-up">
         <div class="row g-0">
             <div class="col-12 col-md-3 col-lg-2">
-                <img src="https://via.placeholder.com/512x512" class="img-fluid w-100 h-100">
+            @if($ilan->photos->count() > 0)
+                @foreach($ilan->photos as $photo) 
+                    <img src="{{url('/storage/'.$photo->fotograf)}}" class="d-block w-100">
+                @endforeach
+            @else
+                <img src="https://picsum.photos/200" class="img-fluid w-100 h-100">
+            @endif
             </div>
             <div class="col-12 col-md-9 col-lg-10">
                 <div class="row g-0">
@@ -42,10 +49,10 @@
                                 {{$ilan->miktar}}
                             </div>
                             <div class="col-4">
-                                Asansörlü
+                                {{$ilan->arac_cesidi}}
                             </div>
                             <div class="col-3">
-                                Tır
+                                {{$ilan->arac}}
                             </div>
                         </div>
                     </div>
@@ -61,4 +68,5 @@
             </div>
         </div>
     </div>
+    </a>
 @endforeach

@@ -21,9 +21,10 @@ return new class extends Migration
             $table->string('nereden')->nullable();
             $table->string('nereye')->nullable();
 
-            $table->string('iller')->nullable();
-            $table->string('ekyük')->nullable();
+            $table->string('iller')->nullable();//nakliye
+            $table->string('ekyük')->nullable();//nakliye
             $table->string('arac')->nullable();
+            $table->string('arac_cesit')->nullable();//?
             $table->string('kasa')->nullable();
             
             $table->string('ürün_cesit')->nullable();

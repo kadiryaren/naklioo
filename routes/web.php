@@ -24,6 +24,7 @@ Route::get('/home', function(){
     return redirect('');
 })->name('home');
 
+Route::post('/home/filter',[App\Http\Controllers\HomeController::class,'filter'])->name('home.filter');
 Route::resource('home',App\Http\Controllers\HomeController::class);
 
 Route::resource('ilan',App\Http\Controllers\IlanController::class);
