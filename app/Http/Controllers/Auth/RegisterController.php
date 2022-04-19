@@ -27,6 +27,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'role' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'photo' => ['image'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'lastName' => ['string', 'max:255'],
             'username' => ['string', 'max:255'],
@@ -43,7 +44,7 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {   
-        
+        $imagePath = $data['photo']->store('uploads', 'public');
         return User::create([
             'role' => $data['role'],
             'name' => $data['name'],
@@ -59,6 +60,7 @@ class RegisterController extends Controller
             'mahalle' => $data['mahalle'],
             'adres' => $data['adres'] ?? "",
             'iller' => $data['iller'] ?? "",
+            'photo' => $imagePath,
         ]);
     }
 }

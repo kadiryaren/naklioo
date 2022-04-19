@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('lastName')->nullable();
             $table->string('username')->nullable();
             $table->string('role');
+            $table->string('photo')->nullable();
             $table->string('iller')->nullable();
             $table->string('aciklama')->nullable();
             $table->string('vergi_no')->nullable();

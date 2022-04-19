@@ -64,7 +64,7 @@
                                     <a class="nav-link" href="{{route('ilan.index')}}"><i class="bi bi-file-earmark-plus"></i> İlan Ver</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/"><i class="bi bi-building"></i> Firmalarımız</a>
+                                    <a class="nav-link" href="{{route('firm.index')}}"><i class="bi bi-building"></i> Firmalarımız</a>
                                 </li>
                                 @auth
                                 <li class="nav-item">

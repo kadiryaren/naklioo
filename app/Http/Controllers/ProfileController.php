@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\ilan;
 
 class ProfileController extends Controller
 {
@@ -16,8 +17,9 @@ class ProfileController extends Controller
     public function index()
     {   
         $user = Auth::user();
-
-        return view('profile.index',compact('user'));
+        $trans = ilan::where('user_id',$user->id)->where('ilan_türü','firma')->get();
+        $load = ilan::where('user_id',$user->id)->where('ilan_türü','bireysel')->get();
+        return view('profile.index',compact('user','trans','load'));
     }
 
     

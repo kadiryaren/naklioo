@@ -31,4 +31,5 @@ Route::get('/ilan/tur/{tur?}',[App\Http\Controllers\IlanController::class,'tur']
 Route::resource('ilan',App\Http\Controllers\IlanController::class);
 
 Route::resource('profile',App\Http\Controllers\ProfileController::class);
+Route::resource('firm',App\Http\Controllers\FirmController::class);
 

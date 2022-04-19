@@ -6,7 +6,7 @@
                 <h2 class="my-4">Profil</h2>
             </div>
             <div class="col-sm-4 text-center">
-                <img src="https://via.placeholder.com/256x256" class="img-fluid rounded-pill">
+                <img src="{{$user->profileImage()}}" class="img-fluid rounded-pill">
             </div>
             <div class="col-sm-8 text-center">
                 <div class="row g-2">
