@@ -20,11 +20,12 @@
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="p-2">
-                            <div class="text-center">Lorem ipsum dolor sit amet.</div>
+                            <div class="text-center">{{$comp->username}}</div>
                             <hr class="mb-1">
-                            <div>Telefon: <a href="tel:1111">0 (555) 322 1234</a></div>
+                            <div class="text-center">{{$comp->aciklama}}</div>
                             <hr class="mb-1">
-                            <div>Fiyatlandırma: 500-600</div>
+                            <div>Telefon: <a href="tel:1111">{{$comp->phone}}</a></div>
+                            
                         </div>
                     </div>
                 </div>

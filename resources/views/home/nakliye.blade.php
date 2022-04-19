@@ -3,11 +3,11 @@
     <div class="bg-light mt-2 border" data-aos="flip-up">
         <div class="row g-0">
             <div class="col-12 col-md-3 col-lg-2">
-            @if($ilan->photos->count() > 0)
-                @foreach($ilan->photos as $photo) 
-                    <img src="{{url('/storage/'.$photo->fotograf)}}" class="d-block w-100">
-                @endforeach
-            @else
+                @if($ilan->photos->count() > 0)
+                    @foreach($ilan->photos as $photo) 
+                        <img src="{{url('/storage/'.$photo->fotograf)}}" class="d-block w-100">
+                    @endforeach
+                @else
                 <img src="https://picsum.photos/200" class="img-fluid w-100 h-100">
             @endif
             </div>
