@@ -1,5 +1,5 @@
 <div id="formBireysel">
-        <form method="POST" action="{{route('register')}}"class="row g-2">
+        <form method="POST" action="{{route('register')}}"class="row g-2" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="role" value="Bireysel">
             <div class="col-6">
@@ -51,6 +51,10 @@
             <div class="col-12">
                 <label for="inputBireyAdres" class="form-label">Adres</label>
                 <input type="text" class="form-control" id="inputBireyAdres" name="adres"required>
+            </div>
+            <div class="col-12">
+                <label for="photo" class="form-label">Foto</label>
+                <input class="form-control" type="file" id="photo" name="photo" multiple>
             </div>
             <div class="col-12">
                 <label class="form-check-label" for="inputBireySozlesme"><span><a

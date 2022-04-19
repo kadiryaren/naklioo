@@ -25,7 +25,8 @@ class User extends Authenticatable
         'ilce',
         'mahalle',
         'adres',
-        'iller'
+        'iller',
+        'photo'
     ];
 
     protected $hidden = [
@@ -39,12 +40,6 @@ class User extends Authenticatable
 
     public function ilan(){
         return $this->hasMany(ilan::Class);
-    }
-    public function profileImage()
-    {
-        $imagePath = ($this->image) ? $this->image : 'profile/JNiNHZYPax0bk1mZWBDuZbvKfghk7OsZRJjsTrXO.png';
-
-        return '/storage/' . $imagePath;
     }
     
 }

@@ -16,7 +16,7 @@
             <div class="bg-light border">
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <img src="./assets/img/p3.jpg" class="img-fluid h-100 w-100">
+                        <img src="{{$comp->fotograf}}" class="img-fluid h-100 w-100">
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="p-2">

@@ -40,6 +40,7 @@ class IlanController extends Controller
     {   
         //dd($request);
         //dd($request->image->count());
+        //dd($request);
         if(count($request->image) > 0){
             foreach($request->image as $image){
                 $image->isValid();

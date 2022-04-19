@@ -1,6 +1,8 @@
 <div id="formFirma" class="d-none">
         <form method="POST" action="{{route('register')}}"class="row g-2">
             @csrf
+        <input type="text" name="photo">
+
             <input type="hidden" name="role" value="Firma">
             <div class="col-6">
                 <label for="inputFirmaAdi" class="form-label">Firma Adi</label>
