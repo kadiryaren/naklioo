@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('role');
             $table->string('iller')->nullable();
-            //$table->string('fiyat')->nullable();
+            $table->string('aciklama')->nullable();
             $table->string('vergi_no')->nullable();
             $table->string('il')->nullable();
             $table->string('ilce')->nullable();

@@ -1,3 +1,6 @@
+@extends('layouts.bar')
+@section('content')
+<div class="col-lg-8 p-4">
 <div id="formYukSahibi">
     <form class="row g-2" method="POST" action="{{route('ilan.store')}}" enctype="multipart/form-data" >
         @csrf
@@ -85,3 +88,5 @@
         </div>
     </form>
 </div>
+</div>
+@endsection

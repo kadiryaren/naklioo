@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <!--Preloader-->
     <div class="loader-wrapper">
         <div class="loader"></div>
@@ -53,18 +52,25 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/"><i class="bi bi-house"></i> Ana Sayfa</a>
                                 </li>
+                                @guest
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('login')}}"><i class="bi bi-person-fill"></i> Giriş Yap</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('register')}}"><i class="bi bi-person-heart"></i> Kayıt Ol</a>
                                 </li>
+                                @endguest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('ilan.create')}}"><i class="bi bi-file-earmark-plus"></i> İlan Ver</a>
+                                    <a class="nav-link" href="{{route('ilan.index')}}"><i class="bi bi-file-earmark-plus"></i> İlan Ver</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/"><i class="bi bi-building"></i> Firmalarımız</a>
                                 </li>
+                                @auth
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('profile.index')}}"><i class="bi bi-person"></i> Profil</a>
+                                </li>
+                                @endauth
                             </ul>
                         </div>
                     </div>

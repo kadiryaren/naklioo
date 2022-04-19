@@ -27,6 +27,7 @@ Route::get('/home', function(){
 Route::post('/home/filter',[App\Http\Controllers\HomeController::class,'filter'])->name('home.filter');
 Route::resource('home',App\Http\Controllers\HomeController::class);
 
+Route::get('/ilan/tur/{tur?}',[App\Http\Controllers\IlanController::class,'tur'])->name('ilan.tur');
 Route::resource('ilan',App\Http\Controllers\IlanController::class);
 
 Route::resource('profile',App\Http\Controllers\ProfileController::class);

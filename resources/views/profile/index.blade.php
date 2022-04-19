@@ -14,15 +14,14 @@
                         <h3>{{ $user->name }}</h3>
                     </div>
                     <div class="col-12">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum maxime unde, pariatur beatae
-                        laboriosam iure! Est possimus, nobis nemo mollitia dolorum praesentium blanditiis nam similique.
+                        {{$user->aciklama}}
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 my-4">
                 <h3>Bilgiler</h3>
-                <div>Telefon Numarası: <a href="tel:1111">1111111</a></div>
-                <div>Email: <a href="mailto:abc@test.com">abc@test.com</a></div>
+                <div>Telefon Numarası: <a href="tel:{{$user->phone}}">{{$user->phone}}</a></div>
+                <div>Email: <a href="mailto:abc@test.com">{{$user->email}}</a></div>
                 <div>Fiyat: <span class="text-primary">100 - 200</span></div>
             </div>
             <div class="col-lg-8 text-lg-end my-4">
@@ -310,5 +309,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 @endsection

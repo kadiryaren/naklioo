@@ -18,12 +18,19 @@ class IlanController extends Controller
 
     public function index()
     {
-        //
+        return view('ilan.index');
     }
 
-   
+    public function tur($tur = ""){
+        if($tur == "nakliye"){
+            return view('ilan.nakliye');
+        }else{
+            return view('ilan.yük');
+        }
+    }
+
     public function create()
-    {   
+    {   //dd($tür);   
         $user = Auth::user();
         return view('ilan.create',compact('user'));
     }
@@ -79,7 +86,7 @@ class IlanController extends Controller
     }
 
     public function show($id)
-    {
+    {   
         $ilan = ilan::find($id);
         return view('ilan.show',compact('ilan'));
     }
